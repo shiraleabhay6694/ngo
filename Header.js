@@ -1,35 +1,34 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-export class Header extends Component {
-    render() {
-        return (
-            <div>
+import {Nav,NavLink,Bars,NavMenu,NavBtn,NavBtnLink} from './HeaderElements'
 
-<nav className="navbar navbar-expand-sm  navbar-dark" style={{backgroundColor:"rgb(50, 70, 135)"}}>
+const Header = () => {
+    return (
+        <>
+            <Nav>
+                <img style={{width:'100px'}} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbMb0ChgOviEO6rzecpdBSQ7wVKlVKSt2owQ&usqp=CAU"/>
+                <Bars/>
+                <NavMenu>
+                    <NavLink to="" activeStyle>
+                        About Us
+                    </NavLink>
+                    <NavLink to="" activeStyle>
+                        Home
+                    </NavLink>
+                    <NavLink to="" activeStyle>
+                        Home
+                    </NavLink>
+                    <NavLink to="./Signup.js" activeStyle>
+                        Sign Up
+                    </NavLink>
+                </NavMenu>
 
-  <img className="navbar-brand" style={{width:'5%',paddingLeft:"15px"}} src={URL="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbMb0ChgOviEO6rzecpdBSQ7wVKlVKSt2owQ&usqp=CAU"}/>
-  
-  
-  <ul className="navbar-nav" >
-    <li className="nav-item">
-      <a style={{color:'white'}} className="nav-link" href="#">Home</a>
-    </li>
-    <li className="nav-item">
-      <a style={{color:'white'}} className="nav-link " href="#">Signup</a>
-    </li>
-    <li className="nav-item">
-      <a style={{color:'white'}} className="nav-link " href="#">Home</a>
-    </li>
-    <li className="nav-item">
-      <a style={{color:'white'}} className="nav-link" href="#">Home</a>
-    </li>
-  </ul>
-</nav>
-
-                
-            </div>
-        )
-    }
+                <NavBtn>
+                    <NavBtnLink to="/signin">Sign In</NavBtnLink>
+                </NavBtn>
+            </Nav>
+        </>
+    )
 }
 
 export default Header
